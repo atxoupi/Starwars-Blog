@@ -12,7 +12,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			characters:[],
+			planets:[]
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -23,6 +25,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+				fetch("https://www.swapi.tech/api/people/")
+				.then((Response)=>Response.json())
+				.then((data)=> setStore({characters : data.results}))
+			},
+			loadSomePlanet: () => {
+				fetch("https://www.swapi.tech/api/planets/")
+				.then((Response)=>Response.json())
+				.then((data)=> setStore({planets : data.results}))
 			},
 			changeColor: (index, color) => {
 				//get the store
