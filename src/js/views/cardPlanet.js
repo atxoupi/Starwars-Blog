@@ -12,7 +12,7 @@ export const CardPlanet = () =>{
         {store.planets.map((item)=>{return(
         <div className="m-3" key={item.uid}>
 		<div className="card" style={{width: "18rem"}}>
-        <img src="https://picsum.photos/id/870/200/300?grayscale&blur=2" className="card-img-top" alt="..." />
+        <img src="https://picsum.photos/id/870/400/200?grayscale&blur=2" className="card-img-top" alt="..." />
         <div className="card-body">
             <h5 className="card-title">{item.name}</h5>
             <p className="card-text">Poblacion: {item.population}<br></br>Período Orbital: {item.orbital_period}</p>

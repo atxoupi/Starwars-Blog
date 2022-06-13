@@ -7,8 +7,7 @@ import { Context } from "../store/appContext";
 
 export const Home = () => {
 	const {store}=useContext(Context);
-	console.log(store.characters);
-	//console.log(store.planets);
+
 	return (
 		<div className="text-left mt-5">
 			<h1 className="text-danger">Character</h1>
