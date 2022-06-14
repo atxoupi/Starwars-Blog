@@ -7,6 +7,7 @@ export const Single = props => {
 	const { store, actions } = useContext(Context);
 	const {theid} = useParams();
 	useEffect(()=>{
+		console.log({theid});
 		actions.addPerson(theid);
 	},[])
 	return (
@@ -15,8 +16,8 @@ export const Single = props => {
 			<div className="d-flex">
 			<img className="m-2" src="https://picsum.photos/800/600/?blur" />
 			<div className="d-flex-column">
-			<h1>{store.dataPerson.name}</h1>
-			<p className="lead m-2">A person within the Star Wars universe. Character created in: {store.dataPerson.created}</p></div>
+			<h1>{store.dataSingle.name}</h1>
+			<p className="lead m-2">A person within the Star Wars universe. Character created in: {store.dataSingle.created}</p></div>
 			</div>
 			<hr className="my-4" />
 			<table className="table text-secondary">
@@ -32,12 +33,12 @@ export const Single = props => {
 				</thead>
 				<tbody>
 					<tr className="table-warning text-danger">
-					<td>{store.dataPerson.name}</td>
-					<td>{store.dataPerson.birth_year}</td>
-					<td>{store.dataPerson.gender}</td>
-					<td>{store.dataPerson.height}</td>
-					<td>{store.dataPerson.hair_color}</td>
-					<td>{store.dataPerson.eye_color}</td>
+					<td>{store.dataSingle.name}</td>
+					<td>{store.dataSingle.birth_year}</td>
+					<td>{store.dataSingle.gender}</td>
+					<td>{store.dataSingle.height}</td>
+					<td>{store.dataSingle.hair_color}</td>
+					<td>{store.dataSingle.eye_color}</td>
 					</tr>
 				</tbody>
 			</table>
