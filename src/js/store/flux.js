@@ -47,7 +47,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then((data)=> setStore({dataSingle : data.result.properties}))
 			},
 			addPlanet: (theid) => {
-				fetch("https://www.swapi.tech/api/planet/"+theid)
+				fetch("https://www.swapi.tech/api/planets/"+theid)
 				.then((Response)=>Response.json())
 				.then((data)=> setStore({dataSingle : data.result.properties}))
 			},

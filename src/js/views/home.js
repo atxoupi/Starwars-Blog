@@ -17,7 +17,7 @@ export const Home = () => {
 			</div>
 			<h1 className="text-danger">Planets</h1>
 			<div className="d-flex p-2  m-2 w-100 overflow-auto">
-				{store.planets.map((item)=>{return( <Card key={item.uid} nombre={item.name} theid={item.uid+100} />);})}
+				{store.planets.map((item)=>{return( <Card key={item.uid} nombre={item.name} theid={item.uid+"p"} />);})}
 			</div>
 		</div>
 	);

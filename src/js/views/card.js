@@ -15,7 +15,6 @@ export const Card = ({nombre, theid}) =>{
         else setColor("btn btn-outline-warning");
         actions.addFavorite(nombre);
     }
-    console.log(theid);
     //debemos conseguir modificar 1 solo corazon y no el de todas las fichas
     //debemos conseguir guardar en store un [] con los datos de los favoritos
     return (
