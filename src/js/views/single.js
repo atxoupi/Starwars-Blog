@@ -12,8 +12,6 @@ export const Single = props => {
 		let indice=theid.indexOf("p");
 		if (indice!==-1){
 			actions.addPlanet(theid.substring(0,indice));
-			let planetas=["Name","Gravity","Rotation Period","Population","Diameter","Terrain"];
-			setDatos(planetas);
 			let datosPlanetas={
 				a :store.dataSingle.name,
 				b: store.dataSingle.gravity,
@@ -22,6 +20,8 @@ export const Single = props => {
 				e: store.dataSingle.diameter,
 				f: store.dataSingle.terrain
 			};
+			let planetas=["Name","Gravity","Rotation Period","Population","Diameter","Terrain"];
+			setDatos(planetas);
 			setDatosStore(datosPlanetas);	
 		}
 		else {
