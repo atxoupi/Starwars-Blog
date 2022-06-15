@@ -41,6 +41,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				newarr.push(nombre);
 				setStore({favorites: newarr});
 			},
+			borrarTarea: (name) => {
+				let newarr=getStore().favorites;
+				setStore({favorites: newarr.filter((item) => item !== name)});
+			},
 			addPerson: (theid) => {
 				fetch("https://www.swapi.tech/api/people/"+theid)
 				.then((Response)=>Response.json())

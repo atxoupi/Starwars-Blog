@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 
 export const Card = ({nombre, theid}) =>{ 
-    const {store, actions}=useContext(Context);
+    const {actions}=useContext(Context);
     const [heart,setHeart] = useState(<i className="fa-regular fa-heart"></i>)
     const [color, setColor] = useState("btn btn-outline-warning");
 
