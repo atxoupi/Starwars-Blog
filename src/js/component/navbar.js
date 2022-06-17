@@ -17,7 +17,7 @@ export const Navbar = () => {
 			<div className="ml-auto">
 				{/* <Link to="/demo"> */}
 					<div className="dropdown ">
-					<button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+					<button className="btn btn-outline-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 						Favorites  
 						<span className="border border-danger border-2 m-3 px-1 rounded	">{store.favorites.length}</span>
 					</button>

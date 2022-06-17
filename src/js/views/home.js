@@ -11,11 +11,11 @@ export const Home = () => {
 
 	return (
 		<div className="text-left mt-5">
-			<h1 className="text-danger">Character</h1>
+			<h1 id="article" className="text-warning">Character</h1>
 			<div className="d-flex p-2  m-2 w-100 overflow-auto">
 				{store.characters.map((item)=>{return( <Card key={item.uid} nombre={item.name} theid={item.uid} />);})}
 			</div>
-			<h1 className="text-danger">Planets</h1>
+			<h1 id="article" className="text-warning">Planets</h1>
 			<div className="d-flex p-2  m-2 w-100 overflow-auto">
 				{store.planets.map((item)=>{return( <Card key={item.uid} nombre={item.name} theid={item.uid+"p"} />);})}
 			</div>

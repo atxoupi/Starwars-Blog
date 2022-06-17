@@ -38,12 +38,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			addFavorite: (nombre) => {
 				let newarr=getStore().favorites;
+				for(let i=0;i<newarr.length;i++){
+					if (newarr[i]===nombre) return true;
+				}
 				newarr.push(nombre);
 				setStore({favorites: newarr});
 			},
-			borrarTarea: (name) => {
+			findFavorite: (nombre) => {
 				let newarr=getStore().favorites;
-				setStore({favorites: newarr.filter((item) => item !== name)});
+				for(let i=0;i<newarr.length;i++){
+					if (newarr[i]===nombre) return true;
+				}
+				return false;
+			},
+			borrarTarea: (nombre) => {
+				let newarr=getStore().favorites;
+				setStore({favorites: newarr.filter((item) => item !== nombre)});
 			},
 			addPerson: (theid) => {
 				fetch("https://www.swapi.tech/api/people/"+theid)
