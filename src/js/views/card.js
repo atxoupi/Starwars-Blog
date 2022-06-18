@@ -10,7 +10,6 @@ export const Card = ({nombre, theid}) =>{
     const {actions}=useContext(Context);
     const [heart,setHeart] = useState("fa-regular fa-heart")
     const [color, setColor] = useState("btn btn-outline-warning");
-    
 
     function addFavorite(nombre){
         findFavorite(nombre);
@@ -35,7 +34,7 @@ export const Card = ({nombre, theid}) =>{
 	<div className="d-flex">
         <div className="m-3">
 		<div className="card border border-warning" style={{width: "18rem"}}>
-        <img src="https://picsum.photos/id/870/800/600?grayscale&blur=2" className="card-img-top" alt="..." />
+        <img src={(theid.indexOf("p")!==-1)?"https://lafuerzanoticias.files.wordpress.com/2018/10/mustafar-tall.jpg": "https://i.blogs.es/2cc78a/ordenstarwars/840_560.jpg"} className="card-img-top" alt="..." />
         <div className="card-body">
             <h5 className="card-title">{nombre}</h5>
             <p className="card-text"></p>

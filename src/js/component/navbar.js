@@ -21,9 +21,9 @@ export const Navbar = () => {
 						Favorites  
 						<span className="border border-ligth border-2 m-3 px-1 rounded	">{store.favorites.length}</span>
 					</button>
-					<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					<ul className="dropdown-menu " aria-labelledby="dropdownMenuButton1">
 						{store.favorites.map((item,key)=>{return(
-							<li key={key}>{item}<button type="button" className="btn btn-outline-danger" onClick={()=>borrar(item)}> <i className="fa-solid fa-trash-can" ></i></button></li>
+							<li className="d-flex justify-content-between" key={key}>{item}<button type="button" className="btn btn-outline-danger" onClick={()=>borrar(item)}> <i className="fa-solid fa-trash-can" ></i></button></li>
 						);})}
 					</ul>
 					</div>
