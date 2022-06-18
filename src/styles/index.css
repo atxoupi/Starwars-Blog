@@ -18,9 +18,29 @@ h1{
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.card-title{
+    background:  linear-gradient(
+         rgb(238, 233, 209),
+         rgb(245, 160, 4));
 
-
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 p{
     font-family: "Dank Mono", ui-monospace, monospace;
 }
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: orange;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(247, 230, 85);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid orange;  /* creates padding around scroll thumb */
+  }
+ 

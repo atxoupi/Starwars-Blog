@@ -42,7 +42,7 @@ export const Card = ({nombre, theid}) =>{
             <div className="d-flex justify-content-between">
                 <Link to={"/single/"+theid}>
                 <div className="p-0 bd-highlight">
-                <span href="#" className="btn btn-primary">Learn More</span>
+                <span href="#" className="btn btn-warning">Learn More</span>
                 </div>
                 </Link>
                 <div className="p-0 bd-highlight">
