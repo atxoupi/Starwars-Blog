@@ -8,23 +8,29 @@ import { Context } from "../store/appContext";
 
 export const Card = ({nombre, theid}) =>{ 
     const {actions}=useContext(Context);
-    const [heart,setHeart] = useState(<i className="fa-regular fa-heart"></i>)
+    const [heart,setHeart] = useState("fa-regular fa-heart")
     const [color, setColor] = useState("btn btn-outline-warning");
     
 
     function addFavorite(nombre){
+        findFavorite(nombre);
         if(color==="btn btn-outline-warning"){
             actions.addFavorite(nombre);
-           // setHeart(<i className="fa-solid fa-heart"></i>);
             setColor("btn btn-warning");
         }else{
-            //setHeart(<i className="fa-regular fa-heart"></i>);
             setColor("btn btn-outline-warning");
+            actions.borrarTarea(nombre);
         }
         
     }
-    //debemos conseguir modificar 1 solo corazon y no el de todas las fichas
-    //debemos conseguir guardar en store un [] con los datos de los favoritos
+   function findFavorite(nombre){
+        if (actions.findFavorite(nombre)===true){
+            setHeart("fa-regular fa-heart");
+        }else {
+            setHeart("fa-solid fa-heart");
+        }
+   }
+
     return (
 	<div className="d-flex">
         <div className="m-3">
@@ -40,10 +46,9 @@ export const Card = ({nombre, theid}) =>{
                 </div>
                 </Link>
                 <div className="p-0 bd-highlight">
-                    <span href="#" className={color} onClick={()=>addFavorite(nombre)}><i className={`${actions.findFavorite(nombre)}`?"fa-regular fa-heart":"fa-solid fa-heart"}></i></span>
+                    <span href="#" className={color} onClick={()=>addFavorite(nombre)}><i className={heart}></i></span>
                 </div>
             </div>
-            {/* `${actions.findFavorite(nombre)}`?"fa-regular fa-heart":"fa-solid fa-heart" */}
         </div>
         </div>	
 	    </div>
