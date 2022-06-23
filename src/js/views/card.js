@@ -7,7 +7,7 @@ import { Context } from "../store/appContext";
 
 
 export const Card = ({nombre, theid}) =>{ 
-    const {actions}=useContext(Context);
+    const {store,actions}=useContext(Context);
     const [heart,setHeart] = useState("fa-regular fa-heart")
     const [color, setColor] = useState("btn btn-outline-warning");
 
@@ -30,11 +30,12 @@ export const Card = ({nombre, theid}) =>{
         }
    }
 
+   let indice=theid.indexOf("p");
     return (
 	<div className="d-flex">
         <div className="m-3">
 		<div className="card border border-warning" style={{width: "18rem"}}>
-        <img src={(theid.indexOf("p")!==-1)?"https://lafuerzanoticias.files.wordpress.com/2018/10/mustafar-tall.jpg": "https://i.blogs.es/2cc78a/ordenstarwars/840_560.jpg"} className="card-img-top" alt="..." />
+        <img src={(theid.indexOf("p")!==-1)?store.planetas[theid.substring(0,indice)]:store.personajes[theid]} className="card-img-top" alt="..." />
         <div className="card-body">
             <h5 className="card-title">{nombre}</h5>
             <p className="card-text"></p>
@@ -54,3 +55,4 @@ export const Card = ({nombre, theid}) =>{
     </div>
 );
 };
+//{(theid.indexOf("p")!==-1)?"https://lafuerzanoticias.files.wordpress.com/2018/10/mustafar-tall.jpg": "https://cdn6.dibujos.net/images/listas/140/luke-skywalker.jpg"}
