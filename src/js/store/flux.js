@@ -14,16 +14,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			personajes:{
-				1: "https://cdn6.dibujos.net/images/listas/140/luke-skywalker.jpg",
-				2: "https://cdn6.dibujos.net/images/listas/140/c3po.jpg",
-				3: "https://cdn6.dibujos.net/images/listas/140/r2-d2.jpg",
-				4: "https://cdn6.dibujos.net/images/listas/140/darth-vader.jpg",
-				5: "https://cdn6.dibujos.net/images/listas/140/leia-skywalker.jpg",
+				1: "https://starwars-visualguide.com/assets/img/characters/1.jpg",
+				2: "https://starwars-visualguide.com/assets/img/characters/2.jpg",
+				3: "https://starwars-visualguide.com/assets/img/characters/3.jpg",
+				4: "https://starwars-visualguide.com/assets/img/characters/4.jpg",
+				5: "https://starwars-visualguide.com/assets/img/characters/5.jpg",
 				6: "https://starwars-visualguide.com/assets/img/characters/6.jpg",
 				7: "https://starwars-visualguide.com/assets/img/characters/7.jpg",
 				8: "https://starwars-visualguide.com/assets/img/characters/8.jpg",
 				9: "https://starwars-visualguide.com/assets/img/characters/9.jpg",
-				10: "https://cdn6.dibujos.net/images/listas/140/obi-wan-kenobi.jpg",
+				10: "https://starwars-visualguide.com/assets/img/characters/10.jpg",
 			},
 			planetas:{
 				1: "https://starwars-visualguide.com/assets/img/planets/21.jpg",
